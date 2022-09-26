@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>StarBucks Landing Page Design</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+    <header>
+        <a href="#" class="logo"><img src="images/images/logo.png" alt=""></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="nav" >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div class="textbox">
+            <h1>It's not just Coffee <br> it's <span>Starbucks</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At rem quia, excepturi nostrum impedit eaque rerum similique voluptatem possimus reiciendis dolor quaerat et nemo ex. Explicabo accusantium aut et illo!
+
+            </p>
+            <a href="#"> Learn More</a>
+        </div>
+        <div class="ImgBox">
+            <img src="images/images/img1.png" class='starbuks' alt="">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="images/images/thumb1.png" onclick="imgSLider('images/images/img1.png');changeCircleColor('#017143')" alt=""></li>
+        <li><img src="images/images/thumb2.png" onclick="imgSLider('images/images/img2.png');changeCircleColor('#eb7495')" alt=""></li>
+        <li><img src="images/images/thumb3.png" onclick="imgSLider('images/images/img3.png');changeCircleColor('#d752b1')" alt=""></li>
+    </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="images/images/facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="images/images/instagram.png" alt=""></a></li>
+        <li><a href="#"><img src="images/images/twitter.png" alt=""></a></li>
+    </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSLider(anything)
+        {
+            document.querySelector(".starbuks").src = anything;
+        }
+        function changeCircleColor(color)
+        {
+            const circle = document.querySelector(".circle");
+            circle.style.background = color;
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navi = document.querySelector('.nav');
+            menuToggle.classList.toggle('active');
+            navi.classList.toggle('active');
+        }
+    </script>
+  
+    
+</body>
+</html>
